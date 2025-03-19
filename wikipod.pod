@@ -3,6 +3,8 @@ Description=mediaWiki POD
 
 [Pod]
 PublishPort=8080:80
+Volume=mariadb.volume:/var/lib/mysql/
+Volume=htdocs.volume:/var/www/html/
 
 [Install]
 WantedBy=default.target
