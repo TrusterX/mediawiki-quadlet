@@ -1,0 +1,12 @@
+[Unit]
+Description=the MariaDB Database
+Wants=online.target
+
+[Container]
+ContainerName=mariadb
+Environment=MARIADB_ROOT_PASSWORD=mediawiki
+Image=docker.io/mariadb:lts
+Pod=wikipod.pod
+
+[Install]
+WantedBy=default.target

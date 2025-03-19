@@ -1,0 +1,11 @@
+[Unit]
+Description=MediaWiki Container
+Requires=mariadb.service
+
+[Container]
+ContainerName=mediawiki
+Image=docker.io/mediawiki:lts
+Pod=wikipod.pod
+
+[Install]
+WantedBy=default.target
